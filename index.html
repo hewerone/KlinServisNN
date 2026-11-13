@@ -1,84 +1,1558 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101a24">
-  <meta name="description" content="КлинСервис НН — клининговые услуги в Нижнем Новгороде. Уборка коммерческих и производственных помещений, уборка после ремонта и аварий, мойка фасадов и остекления.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>КлинСервис НН — профессиональный клининг в Нижнем Новгороде</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Oswald', 'sans-serif'],
+            sans: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            paper: '#F2F2EF',
+            ink: '#17191D',
+            graphite: '#171C25',
+            surface: '#27303E',
+            snow: '#F5F7FC',
+            mist: '#B7C4D6',
+            accent: '#4690FF',
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    :root{--navy:#101a24;--navy2:#172635;--blue:#45a6e8;--ice:#eaf4f8;--white:#fff;--muted:#a9bdca;--ink:#172532;--line:rgba(255,255,255,.13)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Manrope,Arial,sans-serif;color:var(--ink);background:#f4f7f8}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-    .top{background:#0b141d;color:#d9e7ef;font-size:13px}.top .wrap{display:flex;justify-content:space-between;gap:16px;padding:10px 0;flex-wrap:wrap}
-    header{position:sticky;top:0;z-index:10;background:rgba(16,26,36,.97);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px}.brandmark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#69c4f2,#1979ba);display:grid;place-items:center;font:700 22px Oswald;color:#092033;box-shadow:0 8px 24px #0004}.brandname{font:700 20px Oswald;letter-spacing:.04em;text-transform:uppercase}.brandtag{font-size:10px;letter-spacing:.16em;color:#9fb6c5;margin-top:3px}.links{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:700;color:#d7e4eb}.links a:hover{color:#72c8f5}.navphone{font-weight:800;color:#fff;white-space:nowrap}.menu{display:none}
-    .hero{background:radial-gradient(ellipse at 80% 15%,#28516a 0,transparent 38%),linear-gradient(120deg,#101a24,#172c3d 65%,#102334);color:#fff;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(90deg,#000,transparent)}.hero .wrap{position:relative;z-index:1;padding:92px 0 88px;display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center}.eyebrow{display:inline-flex;gap:10px;align-items:center;color:#8bd4ff;font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.eyebrow:before{content:"";width:28px;height:2px;background:var(--blue)}h1,h2,h3,p{margin-top:0}h1{font:700 clamp(42px,5vw,66px)/1.08 Oswald;text-transform:uppercase;letter-spacing:.01em;margin:20px 0}.hero p{max-width:650px;color:#c5d5df;font-size:17px;line-height:1.8}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 23px;border-radius:8px;font-weight:800;font-size:13px;transition:.2s}.btn-primary{background:var(--blue);color:#082033;box-shadow:0 10px 28px #45a6e833}.btn-primary:hover{background:#75c9f5;transform:translateY(-2px)}.btn-ghost{border:1px solid #ffffff55;color:#fff}.btn-ghost:hover{background:#ffffff12}.hero-card{background:linear-gradient(145deg,#ffffff19,#ffffff08);border:1px solid #ffffff30;border-radius:18px;padding:30px;box-shadow:0 25px 60px #0003}.hero-card .big{font:700 34px Oswald;color:#83d0fa;margin-bottom:8px}.hero-card p{font-size:14px;margin:0 0 20px}.hero-card ul{list-style:none;padding:0;margin:0}.hero-card li{padding:13px 0;border-top:1px solid #ffffff20;color:#e5f0f5;font-size:13px;display:flex;gap:12px}.hero-card li:before{content:"✓";color:#75cffb;font-weight:900}
-    section{padding:82px 0}.section-dark{background:var(--navy);color:#fff}.section-head{max-width:720px;margin-bottom:38px}.kicker{font-size:11px;color:#1684c2;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.section-dark .kicker{color:#76c9f5}h2{font:700 clamp(32px,4vw,46px)/1.15 Oswald;text-transform:uppercase;margin:12px 0 15px}.section-head p{color:#647887;line-height:1.75}.section-dark .section-head p{color:#b4c7d3}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:#fff;border:1px solid #e0e9ee;border-radius:13px;padding:25px;min-height:220px;box-shadow:0 8px 28px #17334a08}.service-num{font:600 13px Oswald;color:#168acb;letter-spacing:.1em}.service h3{font:700 22px Oswald;margin:18px 0 10px}.service p{font-size:13px;line-height:1.75;color:#617481;margin:0}
-    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.feature-panel{border-radius:18px;padding:34px;background:linear-gradient(145deg,#1b3549,#10202d);color:#fff;min-height:310px;display:flex;flex-direction:column;justify-content:space-between}.feature-panel .stamp{font:700 64px Oswald;color:#6bc4f4;line-height:1}.feature-panel p{color:#c4d6e1;line-height:1.7;max-width:360px}.feature-list{display:grid;gap:18px}.feature{display:grid;grid-template-columns:42px 1fr;gap:15px}.feature-icon{width:42px;height:42px;border-radius:10px;background:#dff2fb;color:#167eb5;display:grid;place-items:center;font-weight:900}.feature h3{font-size:16px;margin:2px 0 6px}.feature p{font-size:13px;line-height:1.7;color:#637784;margin:0}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{padding:25px;border:1px solid #ffffff24;border-radius:12px;background:#ffffff08}.step b{font:700 32px Oswald;color:#67c4f4}.step h3{font:700 18px Oswald;margin:12px 0 8px}.step p{font-size:13px;line-height:1.7;color:#b7c9d4;margin:0}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-card{background:#fff;border:1px solid #e0e9ee;border-radius:14px;padding:28px}.contact-card h3{font:700 22px Oswald;margin:0 0 18px}.contact-line{padding:13px 0;border-top:1px solid #e7edf0;font-size:14px;color:#506675}.contact-line strong{display:block;color:#172532;margin-bottom:4px}.contact-line a{color:#087db8;font-weight:800}.contact-cta{background:linear-gradient(135deg,#dff2fb,#eef7fa);border-radius:14px;padding:30px;display:flex;flex-direction:column;justify-content:center}.contact-cta h3{font:700 26px Oswald;margin-bottom:10px}.contact-cta p{font-size:14px;color:#5e7482;line-height:1.7}
-    footer{background:#0b141d;color:#9fb3c0;padding:28px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-    @media(max-width:900px){.links{display:none}.menu{display:block;color:#fff;font-size:12px}.hero .wrap{grid-template-columns:1fr;gap:32px;padding:70px 0}.hero-card{max-width:600px}.services{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr;gap:30px}}
-    @media(max-width:600px){.wrap{width:min(100% - 30px,1160px)}.top .wrap{font-size:11px}.nav{height:68px}.brandname{font-size:17px}.navphone{font-size:12px}.hero .wrap{padding:58px 0}.hero p{font-size:15px}section{padding:62px 0}.services,.steps,.contact-grid{grid-template-columns:1fr}.service{min-height:0}.hero-card{padding:23px}.feature-panel{min-height:260px}.actions .btn{width:100%}}
+    :root {
+      --paper: #F2F2EF;
+      --ink: #17191D;
+      --graphite: #171C25;
+      --surface: #27303E;
+      --snow: #F5F7FC;
+      --mist: #B7C4D6;
+      --accent: #4690FF;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+    }
+
+    /* Металлическая главная кнопка CTA */
+    .btn-metal {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 64px;
+      padding: 0 36px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #2B323E 0%, #171A21 52%, #0F1116 100%);
+      color: #F5F7FC;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 4px solid #C8CFD8;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.7),
+        0 14px 28px -8px rgba(23, 25, 29, 0.45),
+        0 4px 10px -2px rgba(23, 25, 29, 0.25);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-metal::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.22) 50%,
+        transparent 80%
+      );
+      transform: skewX(-20deg);
+      pointer-events: none;
+    }
+
+    .btn-metal:hover {
+      border-color: #E3E8EF;
+      transform: translateY(-1px);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.75),
+        0 18px 34px -8px rgba(23, 25, 29, 0.55);
+    }
+
+    .btn-metal:hover::before {
+      animation: metalSweep 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .btn-metal:active {
+      transform: translateY(1px);
+      box-shadow:
+        inset 0 2px 5px rgba(0, 0, 0, 0.8),
+        0 6px 14px -4px rgba(23, 25, 29, 0.4);
+    }
+
+    .btn-metal:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    @keyframes metalSweep {
+      0% { left: -120%; }
+      100% { left: 160%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn-metal::before {
+        display: none;
+      }
+      .btn-metal {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .btn-metal {
+        height: 56px;
+        padding: 0 26px;
+        font-size: 16px;
+        border-width: 3px;
+      }
+    }
+
+    /* Инженерная сетка на светлом первом экране */
+    .hero-grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(23, 25, 29, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(23, 25, 29, 0.045) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    /* Плавное появление модальных окон */
+    .modal-backdrop {
+      background: rgba(15, 18, 24, 0.78);
+      backdrop-filter: blur(4px);
+    }
   </style>
 </head>
-<body>
-  <div class="top"><div class="wrap"><span>Клининговые услуги • Нижний Новгород</span><span>Связь напрямую: <a href="tel:+79159447589">+7 (915) 944-75-89</a></span></div></div>
-  <header><div class="wrap nav">
-    <a class="brand" href="#top" aria-label="КлинСервис НН — главная"><span class="brandmark">КН</span><span><span class="brandname">КлинСервис НН</span><span class="brandtag">ПРОФЕССИОНАЛЬНЫЙ КЛИНИНГ</span></span></a>
-    <nav class="links"><a href="#services">Услуги</a><a href="#about">О подходе</a><a href="#process">Как работаем</a><a href="#contacts">Контакты</a></nav>
-    <a class="navphone" href="tel:+79159447589">+7 (915) 944-75-89</a>
-  </div></header>
-  <main id="top">
-    <section class="hero"><div class="wrap">
-      <div><span class="eyebrow">Нижний Новгород</span><h1>Чистота сложных объектов — профессиональный подход</h1>
-        <p>Клининг жилых, коммерческих и производственных помещений. Уборка после ремонта и аварийных ситуаций, очистка фасадов, конструкций и остекления.</p>
-        <div class="actions"><a class="btn btn-primary" href="tel:+79159447589">Обсудить задачу</a><a class="btn btn-ghost" href="#services">Посмотреть услуги</a></div>
+<body class="antialiased selection:bg-[#4690FF] selection:text-white">
+
+  <!-- ==================== КОНФИГУРАЦИЯ КОМПАНИИ (МЕНЯЕТСЯ ПОД КЛИЕНТА ИЗ 2ГИС) ==================== -->
+  <script>
+    const DEFAULT_STUDIO_CONFIG = {
+      name: "КлинСервис НН",
+      watermark: "КЛИНСЕРВИС НН",
+      tagline: "Профессиональный клининг",
+      heroTitle: "Профессиональная уборка коммерческих и производственных объектов",
+      heroSubtitle: "Объекты коммерческих и производственных помещений, уборка после ремонта и аварийных ситуаций, мойка фасадов и остекления в Нижнем Новгороде.",
+      city: "Нижний Новгород",
+      address: "ул. Тираспольская, 23",
+      phone: "+7 (915) 944-75-89",
+      phoneRaw: "+79159447589",
+      telegram: "https://t.me/",
+      whatsapp: "https://wa.me/79159447589",
+      workStart: "09:00",
+      workEnd: "18:00",
+      workDaysLabel: "График и возможность выезда уточняйте по телефону",
+      crewsCount: 1,
+      bufferMinutes: 30,
+      ownerPin: "2026",
+      services: [
+        {
+          id: "srv-commercial",
+          title: "Уборка коммерческих помещений",
+          category: "Коммерческий клининг",
+          basePrice: 0,
+          pricePerSqm: 0,
+          baseDurationMinutes: 0,
+          description: "Очистка офисных, торговых и других нежилых помещений. Состав работ согласовывается с учётом назначения и состояния объекта.",
+          checklist: ["Обсуждение типа и площади помещения", "Согласование перечня зон и поверхностей", "Подбор состава работ под объект"],
+          popular: true
+        },
+        {
+          id: "srv-industrial",
+          title: "Объекты производственных помещений",
+          category: "Промышленный клининг",
+          basePrice: 0,
+          pricePerSqm: 0,
+          baseDurationMinutes: 0,
+          description: "Уборка производственных площадей, конструкций и стен с применением профессиональных чистящих средств.",
+          checklist: ["Уборка производственных помещений", "Очистка конструкций и стен", "Оценка объёма работ перед расчётом"],
+          popular: false
+        },
+        {
+          id: "srv-postbuild",
+          title: "Уборка после ремонта",
+          category: "Послестроительная уборка",
+          basePrice: 0,
+          pricePerSqm: 0,
+          baseDurationMinutes: 0,
+          description: "Удаление строительной пыли и загрязнений после ремонтных и строительных работ.",
+          checklist: ["Оценка характера строительных загрязнений", "Согласование обрабатываемых поверхностей", "Расчёт стоимости по объекту"],
+          popular: false
+        },
+        {
+          id: "srv-emergency",
+          title: "Уборка после аварий и затоплений",
+          category: "Специальные работы",
+          basePrice: 0,
+          pricePerSqm: 0,
+          baseDurationMinutes: 0,
+          description: "Очистка помещений после затоплений, прорыва канализации и других аварийных ситуаций.",
+          checklist: ["Уточнение обстоятельств и типа загрязнения", "Оценка состояния помещения", "Согласование возможного объёма работ"],
+          popular: false
+        },
+        {
+          id: "srv-facade",
+          title: "Мойка фасадов и остекления",
+          category: "Фасады и окна",
+          basePrice: 0,
+          pricePerSqm: 0,
+          baseDurationMinutes: 0,
+          description: "Очистка фасадных поверхностей, окон и остекления коммерческих объектов.",
+          checklist: ["Уточнение типа фасада и остекления", "Оценка доступа к рабочим зонам", "Согласование условий и стоимости"],
+          popular: false
+        }
+      ],
+      gallery: [
+        { id: "dir-1", title: "Объекты коммерческих помещений", area: "По запросу", duration: "По согласованию", tag: "Коммерческий клининг", accent: "#4690FF" },
+        { id: "dir-2", title: "Уборка производственных площадей", area: "По запросу", duration: "По согласованию", tag: "Промышленный клининг", accent: "#10B981" },
+        { id: "dir-3", title: "Очистка фасадов и остекления", area: "По запросу", duration: "По согласованию", tag: "Фасады и остекление", accent: "#F59E0B" }
+      ]
+    };
+  </script>
+
+  <!-- ==================== ШАПКА САЙТА ==================== -->
+  <header class="sticky top-0 z-40 bg-[#F2F2EF]/95 backdrop-blur border-b border-[#17191D]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Логотип -->
+      <a href="#" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4690FF] rounded-lg">
+        <div class="w-10 h-10 rounded-lg bg-[#17191D] text-[#F5F7FC] flex items-center justify-center font-display font-bold text-xl tracking-wider border border-[#C8CFD8]/40 shadow-sm">
+          ОС
+        </div>
+        <div>
+          <div id="header-company-name" class="font-display font-bold text-lg sm:text-xl uppercase tracking-wide text-[#17191D] leading-none">
+            КлинСервис НН
+          </div>
+          <div id="header-city-label" class="text-xs font-medium text-[#17191D]/60 mt-1">
+            г. Нижний Новгород • Профессиональный клининг
+          </div>
+        </div>
+      </a>
+
+      <!-- Навигация (Desktop) -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-[#17191D]/80">
+        <a href="#services" class="hover:text-[#17191D] transition-colors">Услуги</a>
+        <a href="#process" class="hover:text-[#17191D] transition-colors">Этапы работы</a>
+        <a href="#gallery" class="hover:text-[#17191D] transition-colors">Направления работ</a>
+        
+        <a href="#contacts" class="hover:text-[#17191D] transition-colors">Контакты</a>
+      </nav>
+
+      <!-- Инструменты клиента и владельца -->
+      <div class="flex items-center gap-2 sm:gap-3" style="display:none">
+        <button
+          type="button"
+          onclick="openClientLookupModal()"
+          class="px-3.5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-[#17191D] bg-white border border-[#17191D]/15 hover:border-[#17191D]/35 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4690FF]"
+        >
+          Моя запись
+        </button>
+        <button
+          type="button"
+          onclick="openAdminModal()"
+          class="px-3.5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-[#F5F7FC] bg-[#171C25] hover:bg-[#27303E] border border-[#27303E] transition-colors inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4690FF]"
+          title="Вход для администратора компании"
+        >
+          <svg class="w-4 h-4 text-[#4690FF]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span class="hidden sm:inline">Кабинет</span>
+        </button>
       </div>
-      <aside class="hero-card"><div class="big">КЛИНСЕРВИС НН</div><p>Подбор решения под тип объекта, характер загрязнений и объём работ.</p><ul><li>Коммерческие и производственные помещения</li><li>Послестроительная и аварийная уборка</li><li>Фасады и остекление</li></ul></aside>
-    </div></section>
-    <section id="services"><div class="wrap"><div class="section-head"><span class="kicker">Направления работы</span><h2>Услуги клининга</h2><p>Основные направления, представленные в открытых карточках компании. Состав и объём работ согласовываются перед заказом.</p></div>
-      <div class="services">
-        <article class="service"><span class="service-num">01 / КОММЕРЧЕСКИЕ ОБЪЕКТЫ</span><h3>Уборка коммерческих помещений</h3><p>Очистка офисных, торговых и других нежилых пространств с учётом назначения объекта.</p></article>
-        <article class="service"><span class="service-num">02 / ПРОИЗВОДСТВО</span><h3>Клининг производственных помещений</h3><p>Уборка производственных площадей, конструкций и стен с применением профессиональных чистящих средств.</p></article>
-        <article class="service"><span class="service-num">03 / ПОСЛЕ РЕМОНТА</span><h3>Послестроительная уборка</h3><p>Удаление строительной пыли и загрязнений после ремонтных и строительных работ.</p></article>
-        <article class="service"><span class="service-num">04 / АВАРИЙНЫЕ СИТУАЦИИ</span><h3>Уборка после затоплений и аварий</h3><p>Очистка помещений после прорыва канализации, затопления и других загрязнений. Детали уточняются при обращении.</p></article>
-        <article class="service"><span class="service-num">05 / ФАСАДЫ</span><h3>Мойка фасадов</h3><p>Очистка фасадных поверхностей зданий. Возможность и условия выполнения согласовываются по объекту.</p></article>
-        <article class="service"><span class="service-num">06 / ОСТЕКЛЕНИЕ</span><h3>Мойка окон и остекления</h3><p>Очистка окон, витражей и остеклённых поверхностей, в том числе на коммерческих объектах.</p></article>
+    </div>
+  </header>
+
+  <!-- ==================== ПЕРВЫЙ ЭКРАН (HERO — СВЕТЛЫЙ ИНЖЕНЕРНЫЙ ПРОФИЛЬ) ==================== -->
+  <section class="relative overflow-hidden bg-[#F2F2EF] hero-grid-bg border-b border-[#17191D]/10">
+    <!-- Фоновый водяной знак бренда -->
+    <div
+      id="hero-watermark"
+      aria-hidden="true"
+      class="pointer-events-none select-none absolute -bottom-6 left-4 lg:left-8 font-display font-bold text-[88px] sm:text-[148px] lg:text-[210px] leading-none tracking-tight text-[#17191D]/[0.045] uppercase"
+    >
+      OPTIM SERVICE
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- Левая колонка: Оффер, пояснение и главное действие -->
+        <div class="lg:col-span-7 space-y-6 sm:space-y-8">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-[#17191D]/12 shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-[#4690FF]"></span>
+            <span id="hero-address-badge" class="text-xs sm:text-sm font-semibold text-[#17191D]/80">
+              Нижний Новгород, ул. Тираспольская, 23
+            </span>
+          </div>
+
+          <h1
+            id="hero-title"
+            class="font-display font-bold text-[38px] sm:text-[54px] lg:text-[68px] leading-[1.06] tracking-tight text-[#17191D]"
+          >
+            Профессиональная уборка коммерческих и производственных объектов
+          </h1>
+
+          <p
+            id="hero-subtitle"
+            class="text-base sm:text-lg lg:text-xl leading-relaxed text-[#17191D]/80 max-w-2xl"
+          >
+            Объекты коммерческих и производственных помещений, уборка после ремонта и аварийных ситуаций, мойка фасадов и остекления в Нижнем Новгороде.
+          </p>
+
+          <!-- Связка CTA с обещанием -->
+          <div class="pt-2 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <a href="#contacts" class="btn-metal">
+              <span>Обсудить задачу</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+              </svg>
+            </a>
+
+            <a
+              id="hero-phone-link"
+              href="tel:+78442551988"
+              class="inline-flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-semibold text-[#17191D]/80 hover:text-[#17191D] hover:bg-white/70 transition-colors"
+            >
+              <span class="w-9 h-9 rounded-full bg-[#17191D]/8 flex items-center justify-center text-[#17191D]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
+              <div>
+                <div class="text-xs text-[#17191D]/55">Свяжитесь с нами</div>
+                <div id="hero-phone-text" class="text-base font-bold text-[#17191D]">+7 (915) 944-75-89</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Инженерные факты / доказательства -->
+          <div class="pt-4 grid grid-cols-3 gap-4 sm:gap-6 border-t border-[#17191D]/12 max-w-xl">
+            <div>
+              <div class="font-display font-bold text-2xl sm:text-3xl text-[#17191D]">По запросу</div>
+              <div class="text-xs sm:text-sm text-[#17191D]/70 mt-0.5">Стоимость рассчитывается индивидуально</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl sm:text-3xl text-[#17191D]">Объекты</div>
+              <div class="text-xs sm:text-sm text-[#17191D]/70 mt-0.5">Коммерческие и производственные помещения</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl sm:text-3xl text-[#17191D]">По запросу</div>
+              <div class="text-xs sm:text-sm text-[#17191D]/70 mt-0.5">09:00–18:00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Правая колонка: Доминирующий визуальный модуль (Инженерная композиция оборудования и чистого пространства) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl bg-[#171C25] p-6 sm:p-8 text-[#F5F7FC] shadow-2xl border border-[#27303E]">
+            <!-- Верхняя плашка -->
+            <div class="flex items-center justify-between pb-5 border-b border-white/10">
+              <div class="flex items-center gap-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#B7C4D6]">
+                  График работы
+                </span>
+              </div>
+              <span id="hero-crews-badge" class="px-2.5 py-1 rounded bg-[#27303E] text-xs font-bold text-[#4690FF]">
+                По запросу, 09:00–18:00
+              </span>
+            </div>
+
+            <!-- Архитектурная векторная иллюстрация профессионального экстрактора и чистого интерьера -->
+            <div class="my-6 relative rounded-xl bg-gradient-to-br from-[#222936] to-[#13171F] p-5 border border-white/10 overflow-hidden">
+              <svg viewBox="0 0 420 230" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Профессиональное клининговое оборудование и чистый интерьер">
+                <!-- Сетка перспективы -->
+                <line x1="20" y1="195" x2="400" y2="195" stroke="#4690FF" stroke-opacity="0.35" stroke-width="1.5"/>
+                <line x1="50" y1="195" x2="95" y2="40" stroke="#B7C4D6" stroke-opacity="0.12" stroke-width="1"/>
+                <line x1="370" y1="195" x2="325" y2="40" stroke="#B7C4D6" stroke-opacity="0.12" stroke-width="1"/>
+                <!-- Окно чистого интерьера -->
+                <rect x="110" y="34" width="200" height="125" rx="6" fill="#171C25" stroke="#B7C4D6" stroke-opacity="0.25" stroke-width="1.5"/>
+                <line x1="210" y1="34" x2="210" y2="159" stroke="#B7C4D6" stroke-opacity="0.25" stroke-width="1.5"/>
+                <!-- Блики чистого стекла -->
+                <path d="M130 140 L175 55" stroke="#4690FF" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+                <path d="M148 140 L185 70" stroke="#F5F7FC" stroke-opacity="0.25" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M235 135 L275 60" stroke="#4690FF" stroke-opacity="0.35" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Профессиональный экстрактор / пылесос на переднем плане -->
+                <rect x="64" y="118" width="68" height="62" rx="10" fill="#27303E" stroke="#C8CFD8" stroke-width="2"/>
+                <rect x="74" y="102" width="48" height="18" rx="5" fill="#171A21" stroke="#4690FF" stroke-width="1.5"/>
+                <circle cx="80" cy="186" r="9" fill="#0F1116" stroke="#C8CFD8" stroke-width="2"/>
+                <circle cx="116" cy="186" r="9" fill="#0F1116" stroke="#C8CFD8" stroke-width="2"/>
+                <!-- Шланг и насадка -->
+                <path d="M132 145 C175 145, 175 185, 220 185 L275 185" stroke="#C8CFD8" stroke-width="3" stroke-linecap="round"/>
+                <path d="M275 185 L312 174 L322 193 L275 193 Z" fill="#4690FF"/>
+                <!-- Индикаторы чистоты -->
+                <circle cx="330" cy="72" r="18" fill="#4690FF" fill-opacity="0.15" stroke="#4690FF" stroke-width="1.5"/>
+                <path d="M323 72 L328 77 L338 66" stroke="#F5F7FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Быстрый мини-расчёт на первом экране -->
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-[#B7C4D6]">Ближайший свободный выезд:</span>
+                <span id="hero-next-slot" class="font-bold text-white">Сегодня, через 1.5 часа</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-[#B7C4D6]">Поддерживающая уборка:</span>
+                <span id="hero-min-price" class="font-bold text-[#4690FF]">от 2 90По запросу</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-[#B7C4D6]">Генеральная уборка:</span>
+                <span id="hero-gen-price" class="font-bold text-white">от 5 40По запросу</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div></section>
-    <section class="section-dark" id="about"><div class="wrap split">
-      <div class="feature-panel"><div><span class="kicker">КлинСервис НН</span><div class="stamp">ЧИСТО</div></div><p>Работа начинается с понимания задачи: какой объект нужно очистить, какие загрязнения присутствуют и какой результат требуется получить.</p></div>
-      <div><div class="section-head"><span class="kicker">Индивидуально под объект</span><h2>Не шаблонная уборка, а решение под задачу</h2><p>Для каждого обращения важно заранее определить площадь, тип поверхностей, характер загрязнений и доступ к рабочей зоне.</p></div>
-        <div class="feature-list">
-          <div class="feature"><span class="feature-icon">01</span><div><h3>Уточняем детали</h3><p>Обсуждаем тип помещения, объём работ, сроки и особенности объекта.</p></div></div>
-          <div class="feature"><span class="feature-icon">02</span><div><h3>Согласовываем состав работ</h3><p>Определяем, какие зоны и поверхности необходимо очистить.</p></div></div>
-          <div class="feature"><span class="feature-icon">03</span><div><h3>Рассчитываем стоимость</h3><p>Стоимость и условия выполнения уточняются после оценки задачи.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ==================== КАТАЛОГ УСЛУГ (ГРАФИТОВАЯ ГЛАВА) ==================== -->
+  <section id="services" class="bg-[#171C25] text-[#F5F7FC] py-16 sm:py-24 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#4690FF]">Основные направления</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl mt-2 tracking-tight">
+            Клининговые услуги
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-[#B7C4D6] max-w-md">
+          Стоимость зависит от типа объекта, площади, характера загрязнений и объёма работ. Расчёт предоставляется после уточнения деталей.
+        </p>
+      </div>
+
+      <!-- Сетка карточек услуг (рендерится из JS) -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- ==================== ЭТАПЫ И ГАРАНТИИ (ГРАФИТОВАЯ ГЛАВА) ==================== -->
+  <section id="process" class="bg-[#131720] text-[#F5F7FC] py-16 sm:py-20 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#4690FF]">Стандарты работы</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mt-2">
+          Как организуется работа
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-xl bg-[#27303E]/70 border border-white/10 p-6">
+          <div class="font-display font-bold text-3xl text-[#4690FF]">01</div>
+          <h3 class="font-display font-semibold text-xl mt-3">Обсуждение задачи</h3>
+          <p class="text-sm text-[#B7C4D6] mt-2 leading-relaxed">
+            Свяжитесь с компанией и расскажите, какой объект необходимо очистить.
+          </p>
+        </div>
+        <div class="rounded-xl bg-[#27303E]/70 border border-white/10 p-6">
+          <div class="font-display font-bold text-3xl text-[#4690FF]">02</div>
+          <h3 class="font-display font-semibold text-xl mt-3">Осмотр и фиксация цены</h3>
+          <p class="text-sm text-[#B7C4D6] mt-2 leading-relaxed">
+            Уточняются площадь, тип поверхностей, характер загрязнений и доступ к рабочим зонам.
+          </p>
+        </div>
+        <div class="rounded-xl bg-[#27303E]/70 border border-white/10 p-6">
+          <div class="font-display font-bold text-3xl text-[#4690FF]">03</div>
+          <h3 class="font-display font-semibold text-xl mt-3">Уборка по чек-листу</h3>
+          <p class="text-sm text-[#B7C4D6] mt-2 leading-relaxed">
+            Состав работ и необходимые средства очистки согласовываются с учётом особенностей объекта.
+          </p>
+        </div>
+        <div class="rounded-xl bg-[#27303E]/70 border border-white/10 p-6">
+          <div class="font-display font-bold text-3xl text-[#4690FF]">04</div>
+          <h3 class="font-display font-semibold text-xl mt-3">Приёмка и оплата</h3>
+          <p class="text-sm text-[#B7C4D6] mt-2 leading-relaxed">
+            Перед началом работ согласовываются объём, стоимость и сроки выполнения.
+          </p>
         </div>
       </div>
-    </div></section>
-    <section id="process"><div class="wrap"><div class="section-head"><span class="kicker">Понятный порядок</span><h2>Как обсудить заказ</h2><p>Свяжитесь с компанией и расскажите, какой объект требует уборки.</p></div>
-      <div class="steps">
-        <article class="step"><b>01</b><h3>Заявка</h3><p>Позвоните по телефону и кратко опишите объект и задачу.</p></article>
-        <article class="step"><b>02</b><h3>Оценка</h3><p>Уточните площадь, вид загрязнений, адрес и желаемые сроки.</p></article>
-        <article class="step"><b>03</b><h3>Согласование</h3><p>Обсудите перечень работ, стоимость и возможную дату выполнения.</p></article>
-      </div>
-    </div></section>
-    <section id="contacts" style="background:#eaf1f4"><div class="wrap"><div class="section-head"><span class="kicker">Связаться с компанией</span><h2>Обсудим ваш объект</h2><p>Позвоните, чтобы уточнить доступность услуги, условия и расчёт стоимости.</p></div>
-      <div class="contact-grid">
-        <div class="contact-card"><h3>Контактная информация</h3>
-          <div class="contact-line"><strong>Телефон</strong><a href="tel:+79159447589">+7 (915) 944-75-89</a></div>
-          <div class="contact-line"><strong>Адрес</strong>г. Нижний Новгород, ул. Тираспольская, 23</div>
-          <div class="contact-line"><strong>Город обслуживания</strong>Нижний Новгород — уточняйте возможность выезда на ваш объект по телефону</div>
+    </div>
+  </section>
+
+  <!-- ==================== ВЫПОЛНЕННЫЕ ОБЪЕКТЫ (ГАЛЕРЕЯ) ==================== -->
+  <section id="gallery" class="bg-[#171C25] text-[#F5F7FC] py-16 sm:py-20 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#4690FF]">Примеры направлений</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl mt-2">
+            Направления клининга
+          </h2>
         </div>
-        <div class="contact-cta"><h3>Нужна уборка объекта?</h3><p>Опишите тип помещения и характер загрязнений — обсудите с представителем компании возможный состав работ и стоимость.</p><div class="actions"><a class="btn btn-primary" href="tel:+79159447589">Позвонить</a><a class="btn btn-ghost" style="border-color:#9eb8c7;color:#173044" href="https://wa.me/79159447589" target="_blank" rel="noopener">Написать в WhatsApp</a></div></div>
+        <span class="text-xs text-[#B7C4D6]">Перечень и стоимость уточняются при обращении</span>
       </div>
-    </div></section>
-  </main>
-  <footer><div class="wrap foot"><span>© <span id="year"></span> КлинСервис НН</span><span>Клининговые услуги • Нижний Новгород</span><a href="tel:+79159447589">+7 (915) 944-75-89</a></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+      <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- ==================== ОНЛАЙН-ЗАПИСЬ И КАЛЬКУЛЯТОР ==================== -->
+  <section id="booking" style="display:none" class="bg-[#131720] text-[#F5F7FC] py-16 sm:py-24 border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#4690FF]">Заявка на услугу</span>
+        <h2 class="font-display font-bold text-3xl sm:text-5xl mt-2">
+          Оставить заявку
+        </h2>
+        <p class="text-sm sm:text-base text-[#B7C4D6] mt-3">
+          Оставьте контактные данные и удобную дату. Менеджер свяжется с вами для уточнения деталей и подтверждения заказа.
+        </p>
+      </div>
+
+      <!-- Контейнер формы или экрана подтверждения -->
+      <div id="booking-container" class="rounded-2xl bg-[#27303E] border border-white/12 p-6 sm:p-10 shadow-2xl">
+        <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-8">
+          
+          <!-- Шаг 1: Выбор услуги и площади -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-7">
+              <label for="booking-service" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
+                1. Выберите услугу
+              </label>
+              <select
+                id="booking-service"
+                onchange="recalculateBooking()"
+                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white font-medium focus:outline-none focus:border-[#4690FF]"
+              ></select>
+            </div>
+
+            <div class="md:col-span-5" id="area-input-wrapper">
+              <div class="flex items-center justify-between mb-2">
+                <label for="booking-area" class="text-xs font-bold uppercase tracking-wider text-[#B7C4D6]">
+                  2. Площадь помещения
+                </label>
+                <span id="area-value-badge" class="text-sm font-bold text-[#4690FF]">55 м²</span>
+              </div>
+              <input
+                id="booking-area"
+                type="range"
+                min="25"
+                max="220"
+                step="5"
+                value="55"
+                oninput="recalculateBooking()"
+                class="w-full accent-[#4690FF] cursor-pointer mt-2"
+              />
+              <div class="flex justify-between text-[11px] text-[#B7C4D6]/70 mt-1">
+                <span>25 м² (студия)</span>
+                <span>100 м²</span>
+                <span>220 м² (дом)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Итоговая плашка расчёта -->
+          <div class="rounded-xl bg-[#171C25] border border-white/10 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <div class="text-xs text-[#B7C4D6]">Расчётная стоимость работ</div>
+              <div id="calculated-price" class="font-display font-bold text-2xl sm:text-3xl text-white mt-0.5">
+                5 65По запросу
+              </div>
+            </div>
+            <div>
+              <div class="text-xs text-[#B7C4D6]">Ориентировочная длительность</div>
+              <div id="calculated-duration" class="font-display font-semibold text-xl text-[#4690FF] mt-0.5">
+                ~ 3 ч 00 мин
+              </div>
+            </div>
+            <div class="text-xs text-[#B7C4D6] max-w-xs">
+              Инвентарь, стремянка и профессиональная химия уже включены в стоимость.
+            </div>
+          </div>
+
+          <!-- Шаг 2: Дата и выбор свободного слота -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2 border-t border-white/10">
+            <div class="md:col-span-4">
+              <label for="booking-date" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
+                3. Дата выезда
+              </label>
+              <input
+                id="booking-date"
+                type="date"
+                onchange="renderAvailableSlots()"
+                required
+                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white font-medium focus:outline-none focus:border-[#4690FF]"
+              />
+            </div>
+
+            <div class="md:col-span-8">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#B7C4D6]">
+                  4. Желаемое время
+                </span>
+                <span id="slots-status-hint" class="text-xs text-[#4690FF]"></span>
+              </div>
+              <div id="slots-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5"></div>
+            </div>
+          </div>
+
+          <!-- Шаг 3: Контакты клиента -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 border-t border-white/10">
+            <div>
+              <label for="client-name" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
+                Ваше имя *
+              </label>
+              <input
+                id="client-name"
+                type="text"
+                required
+                placeholder="Например, Алексей"
+                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white placeholder-[#B7C4D6]/40 focus:outline-none focus:border-[#4690FF]"
+              />
+            </div>
+            <div>
+              <label for="client-phone" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
+                Телефон для связи *
+              </label>
+              <input
+                id="client-phone"
+                type="tel"
+                required
+                placeholder="+7 (999) 000-00-00"
+                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white placeholder-[#B7C4D6]/40 focus:outline-none focus:border-[#4690FF]"
+              />
+            </div>
+            <div>
+              <label for="client-address" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
+                Адрес объекта (район / улица)
+              </label>
+              <input
+                id="client-address"
+                type="text"
+                placeholder="пр-т Жукова, д. 100"
+                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white placeholder-[#B7C4D6]/40 focus:outline-none focus:border-[#4690FF]"
+              />
+            </div>
+          </div>
+
+          <!-- Сообщение об ошибке валидации -->
+          <div id="booking-error" class="hidden rounded-lg bg-red-500/15 border border-red-500/40 px-4 py-3 text-sm text-red-200"></div>
+
+          <!-- Кнопка отправки -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+            <button type="submit" class="btn-metal w-full sm:w-auto">
+              <span>Отправить заявку</span>
+            </button>
+            <span class="text-xs text-[#B7C4D6]/80">
+              Для уточнения условий и расчёта стоимости свяжитесь с компанией по телефону.
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== КОНТАКТЫ И ПОДВАЛ ==================== -->
+  <footer id="contacts" class="bg-[#0F131A] text-[#F5F7FC] py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-white/10">
+        <div>
+          <div id="footer-company-name" class="font-display font-bold text-2xl uppercase tracking-wide">
+            КлинСервис НН
+          </div>
+          <p class="text-sm text-[#B7C4D6] mt-2 leading-relaxed">
+            Объекты и чистка в Волгограде. Свяжитесь с нами, чтобы уточнить детали и стоимость услуг.
+          </p>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-[#4690FF]">Адрес</div>
+          <p id="footer-address" class="text-base font-medium mt-2">
+            г. Нижний Новгород, ул. Тираспольская, 23
+          </p>
+          <p id="footer-hours" class="text-sm text-[#B7C4D6] mt-1">
+            По запросу: 09:00–18:00 • Сб–Вс: выходные
+          </p>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-[#4690FF]">Контакты</div>
+          <a id="footer-phone" href="tel:+78442551988" class="block font-display font-bold text-2xl mt-2 hover:text-[#4690FF] transition-colors">
+            +7 (915) 944-75-89
+          </a>
+          <div class="flex items-center gap-3 mt-3">
+            <a id="footer-wa" href="https://wa.me/78442551988" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-[#27303E] hover:bg-[#333F52] text-xs font-semibold transition-colors">
+              Написать в WhatsApp
+            </a>
+            <a id="footer-tg" href="https://t.me/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-[#27303E] hover:bg-[#333F52] text-xs font-semibold transition-colors">
+              Telegram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#B7C4D6]/60">
+        <div>© 2026 <span id="footer-copy-name">Оптим сервис</span>. Все права защищены.</div>
+        <div>Объекты и чистка в Волгограде</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== МОДАЛЬНОЕ ОКНО КЛИЕНТА («МОЯ ЗАПИСЬ») ==================== -->
+  <div id="client-modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+    <div class="w-full max-w-lg rounded-2xl bg-[#171C25] border border-white/15 text-[#F5F7FC] p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10">
+        <h3 class="font-display font-bold text-2xl">Управление записью</h3>
+        <button type="button" onclick="closeClientLookupModal()" class="p-2 text-[#B7C4D6] hover:text-white rounded-lg">✕</button>
+      </div>
+
+      <div class="mt-5 space-y-4">
+        <p class="text-sm text-[#B7C4D6]">
+          Введите код бронирования, который вы получили при оформлении заявки (например, <span class="text-white font-mono">BC-1042</span>).
+        </p>
+        <div class="flex gap-2">
+          <input
+            id="lookup-code-input"
+            type="text"
+            placeholder="BC-XXXX"
+            class="flex-1 h-11 px-4 rounded-lg bg-[#27303E] border border-white/15 text-white font-mono uppercase focus:outline-none focus:border-[#4690FF]"
+          />
+          <button
+            type="button"
+            onclick="lookupClientBooking()"
+            class="px-5 h-11 rounded-lg bg-[#4690FF] hover:bg-[#357AE8] text-white font-semibold text-sm transition-colors"
+          >
+            Найти
+          </button>
+        </div>
+
+        <div id="lookup-result" class="pt-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== МОДАЛЬНОЕ ОКНО КАБИНЕТА ВЛАДЕЛЬЦА ==================== -->
+  <div id="admin-modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="w-full max-w-5xl rounded-2xl bg-[#171C25] border border-white/15 text-[#F5F7FC] shadow-2xl my-auto overflow-hidden">
+      
+      <!-- Шапка модалки -->
+      <div class="px-6 py-4 bg-[#0F131A] border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#4690FF]"></span>
+          <h3 class="font-display font-bold text-xl uppercase tracking-wide">Кабинет владельца студии</h3>
+        </div>
+        <button type="button" onclick="closeAdminModal()" class="px-3 py-1.5 rounded-lg bg-[#27303E] hover:bg-[#333F52] text-xs font-semibold">
+          Закрыть ✕
+        </button>
+      </div>
+
+      <!-- Экран входа по PIN -->
+      <div id="admin-login-view" class="p-8 sm:p-12 max-w-md mx-auto text-center space-y-5">
+        <div class="w-12 h-12 rounded-xl bg-[#27303E] text-[#4690FF] flex items-center justify-center mx-auto">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-2xl">Доступ администратора</h4>
+          <p class="text-sm text-[#B7C4D6] mt-1">Введите PIN-код компании для просмотра заявок и редактирования прайса.</p>
+        </div>
+        <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+          <input
+            id="admin-pin-input"
+            type="password"
+            inputmode="numeric"
+            placeholder="••••"
+            class="w-full h-12 text-center text-2xl tracking-[0.4em] font-mono rounded-lg bg-[#27303E] border border-white/15 text-white focus:outline-none focus:border-[#4690FF]"
+          />
+          <div id="admin-login-error" class="hidden text-xs text-red-400">Неверный PIN-код</div>
+          <button type="submit" class="w-full h-12 rounded-lg bg-[#4690FF] hover:bg-[#357AE8] text-white font-semibold transition-colors">
+            Войти в панель управления
+          </button>
+        </form>
+        <p class="text-xs text-[#B7C4D6]/60">Демо-PIN по умолчанию: <span class="font-mono text-white">2026</span></p>
+      </div>
+
+      <!-- Основной интерфейс кабинета владельца -->
+      <div id="admin-dashboard-view" class="hidden">
+        <!-- Вкладки -->
+        <div class="px-6 pt-4 bg-[#131720] border-b border-white/10 flex flex-wrap gap-2">
+          <button type="button" onclick="switchAdminTab('bookings')" id="tab-btn-bookings" class="admin-tab-btn px-4 py-2.5 rounded-t-lg text-sm font-semibold bg-[#171C25] text-[#4690FF] border-t border-x border-white/10">
+            Заявки клиентов (<span id="admin-bookings-count">0</span>)
+          </button>
+          <button type="button" onclick="switchAdminTab('services')" id="tab-btn-services" class="admin-tab-btn px-4 py-2.5 rounded-t-lg text-sm font-semibold text-[#B7C4D6] hover:text-white">
+            Услуги
+          </button>
+          <button type="button" onclick="switchAdminTab('settings')" id="tab-btn-settings" class="admin-tab-btn px-4 py-2.5 rounded-t-lg text-sm font-semibold text-[#B7C4D6] hover:text-white">
+            Настройки компании
+          </button>
+        </div>
+
+        <!-- Вкладка 1: Заявки -->
+        <div id="admin-tab-bookings" class="p-6 max-h-[72vh] overflow-y-auto space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="flex flex-wrap gap-2">
+              <button type="button" onclick="setBookingFilter('all')" class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#4690FF] text-white">Все</button>
+              <button type="button" onclick="setBookingFilter('new')" class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#27303E] text-[#B7C4D6]">Новые</button>
+              <button type="button" onclick="setBookingFilter('confirmed')" class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#27303E] text-[#B7C4D6]">Подтверждённые</button>
+              <button type="button" onclick="setBookingFilter('completed')" class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#27303E] text-[#B7C4D6]">Выполненные</button>
+            </div>
+            <button type="button" onclick="toggleManualBookingForm()" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">
+              + Добавить запись вручную
+            </button>
+          </div>
+
+          <!-- Форма ручной записи администратором -->
+          <form id="manual-booking-form" onsubmit="handleManualBooking(event)" class="hidden rounded-xl bg-[#27303E] p-4 border border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <input id="manual-name" type="text" required placeholder="Имя клиента" class="h-10 px-3 rounded bg-[#171C25] border border-white/15 text-sm text-white" />
+            <input id="manual-phone" type="tel" required placeholder="Телефон" class="h-10 px-3 rounded bg-[#171C25] border border-white/15 text-sm text-white" />
+            <select id="manual-service" class="h-10 px-3 rounded bg-[#171C25] border border-white/15 text-sm text-white"></select>
+            <input id="manual-date" type="date" required class="h-10 px-3 rounded bg-[#171C25] border border-white/15 text-sm text-white" />
+            <input id="manual-time" type="time" value="10:00" required class="h-10 px-3 rounded bg-[#171C25] border border-white/15 text-sm text-white" />
+            <button type="submit" class="h-10 rounded bg-[#4690FF] hover:bg-[#357AE8] text-white text-sm font-semibold">
+              Сохранить заказ
+            </button>
+          </form>
+
+          <div id="admin-bookings-list" class="space-y-3"></div>
+        </div>
+
+        <!-- Вкладка 2: Услуги -->
+        <div id="admin-tab-services" class="hidden p-6 max-h-[72vh] overflow-y-auto space-y-4">
+          <p class="text-xs text-[#B7C4D6]">Изменения сразу применяются на публичной витрине и в калькуляторе записи.</p>
+          <div id="admin-services-list" class="space-y-3"></div>
+        </div>
+
+        <!-- Вкладка 3: Настройки компании -->
+        <div id="admin-tab-settings" class="hidden p-6 max-h-[72vh] overflow-y-auto">
+          <form onsubmit="saveStudioSettings(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs text-[#B7C4D6] mb-1">Название компании</label>
+              <input id="set-name" type="text" required class="w-full h-11 px-3 rounded-lg bg-[#27303E] border border-white/15 text-sm text-white" />
+            </div>
+            <div>
+              <label class="block text-xs text-[#B7C4D6] mb-1">Фоновый водяной знак (Hero)</label>
+              <input id="set-watermark" type="text" required class="w-full h-11 px-3 rounded-lg bg-[#27303E] border border-white/15 text-sm text-white uppercase" />
+            </div>
+            <div>
+              <label class="block text-xs text-[#B7C4D6] mb-1">Город</label>
+              <input id="set-city" type="text" required class="w-full h-11 px-3 rounded-lg bg-[#27303E] border border-white/15 text-sm text-white" />
+            </div>
+            <div>
+              <label class="block text-xs text-[#B7C4D6] mb-1">Телефон</label>
+              <input id="set-phone" type="text" required class="w-full h-11 px-3 rounded-lg bg-[#27303E] border border-white/15 text-sm text-white" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs text-[#B7C4D6] mb-1">Адрес офиса / базы</label>
+              <input id="set-address" type="text" required class="w-full h-11 px-3 rounded-lg bg-[#27303E] border border-white/15 text-sm text-white" />
+            </div>
+            <div>
+              <label class="block text-xs text-[#B7C4D6] mb-1">Количество выездных бригад</label>
+              <input id="set-crews" type="number" min="1" max="20" required class="w-full h-11 px-3 rounded-lg bg-[#27303E] border border-white/15 text-sm text-white" />
+            </div>
+            <div>
+              <label class="block text-xs text-[#B7C4D6] mb-1">PIN-код кабинета владельца</label>
+              <input id="set-pin" type="text" required class="w-full h-11 px-3 rounded-lg bg-[#27303E] border border-white/15 text-sm text-white font-mono" />
+            </div>
+            <div class="sm:col-span-2 flex items-center justify-between pt-3">
+              <button type="button" onclick="resetDemoData()" class="px-4 py-2.5 rounded-lg bg-red-500/15 text-red-300 hover:bg-red-500/25 text-xs font-semibold">
+                Сбросить к исходным настройкам
+              </button>
+              <button type="submit" class="px-6 py-2.5 rounded-lg bg-[#4690FF] hover:bg-[#357AE8] text-white text-sm font-semibold">
+                Сохранить изменения
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== ЛОГИКА ПРИЛОЖЕНИЯ ==================== -->
+  <script>
+    const STORAGE_KEY_CONFIG = 'optim_service_config_v1';
+    const STORAGE_KEY_BOOKINGS = 'optim_service_bookings_v1';
+
+    let studioConfig = loadConfig();
+    let bookings = loadBookings();
+    let selectedSlot = null;
+    let bookingFilter = 'all';
+
+    function loadConfig() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY_CONFIG);
+        return raw ? JSON.parse(raw) : JSON.parse(JSON.stringify(DEFAULT_STUDIO_CONFIG));
+      } catch (e) {
+        return JSON.parse(JSON.stringify(DEFAULT_STUDIO_CONFIG));
+      }
+    }
+
+    function saveConfig() {
+      localStorage.setItem(STORAGE_KEY_CONFIG, JSON.stringify(studioConfig));
+    }
+
+    function loadBookings() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY_BOOKINGS);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {}
+
+      // Новые установки начинаются без демонстрационных заявок.
+      return [];
+    }
+
+    function saveBookings() {
+      localStorage.setItem(STORAGE_KEY_BOOKINGS, JSON.stringify(bookings));
+    }
+
+    function getFutureDateStr(daysOffset) {
+      const d = new Date();
+      d.setDate(d.getDate() + daysOffset);
+      return d.toISOString().split('T')[0];
+    }
+
+    function formatPrice(num) {
+      return new Intl.NumberFormat('ru-RU').format(Math.round(num)) + ' ₽';
+    }
+
+    function formatDuration(mins) {
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return m === 0 ? `${h} ч` : `${h} ч ${m} мин`;
+    }
+
+    function timeToMinutes(t) {
+      const [h, m] = t.split(':').map(Number);
+      return h * 60 + m;
+    }
+
+    function minutesToTime(mins) {
+      const h = String(Math.floor(mins / 60)).padStart(2, '0');
+      const m = String(mins % 60).padStart(2, '0');
+      return `${h}:${m}`;
+    }
+
+    // Применение данных компании ко всем текстовым блокам страницы
+    function renderBrandUI() {
+      document.title = `${studioConfig.name} — Объекты и химчистка (${studioConfig.city})`;
+      document.getElementById('header-company-name').textContent = studioConfig.name;
+      document.getElementById('header-city-label').textContent = `г. ${studioConfig.city} • Объекты и химчистка`;
+      document.getElementById('hero-watermark').textContent = studioConfig.watermark;
+      document.getElementById('hero-address-badge').textContent = `${studioConfig.city}, ${studioConfig.address}`;
+      document.getElementById('hero-title').textContent = studioConfig.heroTitle;
+      document.getElementById('hero-subtitle').textContent = studioConfig.heroSubtitle;
+      document.getElementById('hero-phone-text').textContent = studioConfig.phone;
+      document.getElementById('hero-phone-link').href = `tel:${studioConfig.phoneRaw}`;
+      document.getElementById('hero-crews-badge').textContent = `${studioConfig.crewsCount} бригады на линии`;
+
+      const supportSrv = studioConfig.services[0];
+      const genSrv = studioConfig.services[1] || studioConfig.services[0];
+      if (supportSrv) document.getElementById('hero-min-price').textContent = `от ${formatPrice(supportSrv.basePrice)}`;
+      if (genSrv) document.getElementById('hero-gen-price').textContent = `от ${formatPrice(genSrv.basePrice)}`;
+
+      document.getElementById('footer-company-name').textContent = studioConfig.name;
+      document.getElementById('footer-copy-name').textContent = studioConfig.name;
+      document.getElementById('footer-address').textContent = `г. ${studioConfig.city}, ${studioConfig.address}`;
+      document.getElementById('footer-hours').textContent = studioConfig.workDaysLabel;
+      document.getElementById('footer-phone').textContent = studioConfig.phone;
+      document.getElementById('footer-phone').href = `tel:${studioConfig.phoneRaw}`;
+      document.getElementById('footer-wa').href = studioConfig.whatsapp;
+      document.getElementById('footer-tg').href = studioConfig.telegram;
+    }
+
+    // Рендер карточек услуг
+    function renderServices() {
+      const grid = document.getElementById('services-grid');
+      grid.innerHTML = studioConfig.services.map(srv => `
+        <article class="rounded-2xl bg-[#27303E] border ${srv.popular ? 'border-[#4690FF]' : 'border-white/10'} p-6 sm:p-7 flex flex-col justify-between transition-transform hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-2.5 py-1 rounded bg-[#171C25] text-xs font-semibold text-[#B7C4D6]">
+                ${srv.category}
+              </span>
+              ${srv.popular ? '<span class="px-2.5 py-1 rounded bg-[#4690FF]/20 text-xs font-bold text-[#4690FF]">Частый выбор</span>' : ''}
+            </div>
+
+            <h3 class="font-display font-bold text-2xl text-white">${srv.title}</h3>
+            <p class="text-sm text-[#B7C4D6] mt-2.5 leading-relaxed">${srv.description}</p>
+
+            <ul class="mt-5 space-y-2 border-t border-white/10 pt-4">
+              ${srv.checklist.map(item => `
+                <li class="flex items-start gap-2.5 text-xs sm:text-sm text-[#F5F7FC]/90">
+                  <span class="text-[#4690FF] font-bold mt-0.5">✓</span>
+                  <span>${item}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-white/10">
+            <div class="text-sm text-[#B7C4D6] mb-4">Стоимость и сроки — после оценки объекта</div>
+            <a href="tel:+79159447589" class="block w-full h-11 leading-[44px] text-center rounded-lg bg-[#171C25] hover:bg-[#0F131A] text-[#F5F7FC] border border-white/15 font-semibold text-sm transition-colors">Уточнить условия</a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Рендер галереи работ
+    function renderGallery() {
+      const grid = document.getElementById('gallery-grid');
+      grid.innerHTML = studioConfig.gallery.map(item => `
+        <div class="rounded-2xl bg-[#27303E] border border-white/10 overflow-hidden">
+          <div class="h-44 bg-gradient-to-br from-[#232B38] to-[#131720] p-6 flex flex-col justify-between border-b border-white/10">
+            <span class="self-start px-2.5 py-1 rounded bg-[#171C25] text-xs font-semibold text-[#4690FF]">
+              ${item.tag}
+            </span>
+            <div class="flex items-center gap-4 text-xs font-semibold text-[#B7C4D6]">
+              <span>Площадь: <strong class="text-white">${item.area}</strong></span>
+              <span>Время: <strong class="text-white">${item.duration}</strong></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-display font-semibold text-xl text-white">${item.title}</h3>
+            <p class="text-xs text-[#B7C4D6] mt-1.5">Иллюстративный пример услуги, не подтверждённый кейс компании</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Заполнение селектора услуг в форме записи
+    function populateBookingServices() {
+      const select = document.getElementById('booking-service');
+      const currentVal = select.value;
+      select.innerHTML = studioConfig.services.map(s => `
+        <option value="${s.id}">${s.title} (от ${formatPrice(s.basePrice)})</option>
+      `).join('');
+      if (currentVal && studioConfig.services.some(s => s.id === currentVal)) {
+        select.value = currentVal;
+      }
+      recalculateBooking();
+    }
+
+    function selectServiceAndScroll(serviceId) {
+      const select = document.getElementById('booking-service');
+      select.value = serviceId;
+      recalculateBooking();
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Пересчёт сметы и длительности
+    function recalculateBooking() {
+      const serviceId = document.getElementById('booking-service').value;
+      const srv = studioConfig.services.find(s => s.id === serviceId) || studioConfig.services[0];
+      const areaInput = document.getElementById('booking-area');
+      const areaWrapper = document.getElementById('area-input-wrapper');
+      const area = Number(areaInput.value);
+
+      document.getElementById('area-value-badge').textContent = `${area} м²`;
+
+      let totalPrice = srv.basePrice;
+      let totalDuration = srv.baseDurationMinutes;
+
+      if (srv.pricePerSqm > 0) {
+        areaWrapper.classList.remove('opacity-40', 'pointer-events-none');
+        const extraSqm = Math.max(0, area - 40);
+        totalPrice = srv.basePrice + extraSqm * srv.pricePerSqm;
+        totalDuration = srv.baseDurationMinutes + Math.floor(extraSqm / 25) * 30;
+      } else {
+        areaWrapper.classList.add('opacity-40', 'pointer-events-none');
+      }
+
+      document.getElementById('calculated-price').textContent = formatPrice(totalPrice);
+      document.getElementById('calculated-duration').textContent = `~ ${formatDuration(totalDuration)}`;
+
+      renderAvailableSlots();
+      return { srv, area, totalPrice, totalDuration };
+    }
+
+    // Генерация доступных слотов с учётом числа бригад и буфера
+    function renderAvailableSlots() {
+      const dateVal = document.getElementById('booking-date').value;
+      const slotsGrid = document.getElementById('slots-grid');
+      const hint = document.getElementById('slots-status-hint');
+
+      const { totalDuration } = getCurrentCalcWithoutRender();
+      const startMins = timeToMinutes(studioConfig.workStart);
+      const endMins = timeToMinutes(studioConfig.workEnd);
+      const buffer = studioConfig.bufferMinutes || 30;
+
+      const selectedDate = dateVal ? new Date(`${dateVal}T12:00:00`) : null;
+      if (selectedDate && (selectedDate.getDay() === 0 || selectedDate.getDay() === 6)) {
+        hint.textContent = 'В выходные дни компания не работает';
+        slotsGrid.innerHTML = '<p class="col-span-full text-sm text-[#B7C4D6]">Выберите дату с понедельника по пятницу.</p>';
+        selectedSlot = null;
+        return;
+      }
+      const dayBookings = bookings.filter(b => b.date === dateVal && b.status !== 'cancelled');
+      const slots = [];
+
+      for (let t = startMins; t + 60 <= endMins; t += 60) {
+        const candidateStart = t;
+        const candidateEnd = t + totalDuration + buffer;
+
+        // Подсчёт пересекающихся активных заказов
+        let overlappingCrews = 0;
+        for (const b of dayBookings) {
+          const bStart = timeToMinutes(b.time);
+          const bEnd = bStart + (b.durationMinutes || 150) + buffer;
+          if (candidateStart < bEnd && candidateEnd > bStart) {
+            overlappingCrews++;
+          }
+        }
+
+        const freeCrews = studioConfig.crewsCount - overlappingCrews;
+        slots.push({
+          time: minutesToTime(t),
+          available: freeCrews > 0,
+          freeCrews
+        });
+      }
+
+      const availableCount = slots.filter(s => s.available).length;
+      hint.textContent = availableCount > 0 ? `Доступно окон: ${availableCount}` : 'На эту дату свободных бригад нет';
+
+      if (selectedSlot && !slots.some(s => s.time === selectedSlot && s.available)) {
+        selectedSlot = null;
+      }
+      if (!selectedSlot) {
+        const firstFree = slots.find(s => s.available);
+        if (firstFree) selectedSlot = firstFree.time;
+      }
+
+      slotsGrid.innerHTML = slots.map(slot => {
+        const isSelected = selectedSlot === slot.time;
+        if (!slot.available) {
+          return `
+            <button type="button" disabled class="h-11 rounded-lg bg-[#171C25]/50 border border-white/5 text-xs font-mono text-[#B7C4D6]/30 line-through cursor-not-allowed">
+              ${slot.time}
+            </button>
+          `;
+        }
+        return `
+          <button
+            type="button"
+            onclick="selectTimeSlot('${slot.time}')"
+            class="h-11 rounded-lg font-mono text-sm font-semibold border transition-colors ${
+              isSelected
+                ? 'bg-[#4690FF] border-[#4690FF] text-white shadow-md'
+                : 'bg-[#171C25] border-white/15 text-[#F5F7FC] hover:border-[#4690FF]'
+            }"
+          >
+            ${slot.time}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function getCurrentCalcWithoutRender() {
+      const serviceId = document.getElementById('booking-service').value;
+      const srv = studioConfig.services.find(s => s.id === serviceId) || studioConfig.services[0];
+      const area = Number(document.getElementById('booking-area').value);
+      let totalPrice = srv.basePrice;
+      let totalDuration = srv.baseDurationMinutes;
+      if (srv.pricePerSqm > 0) {
+        const extraSqm = Math.max(0, area - 40);
+        totalPrice = srv.basePrice + extraSqm * srv.pricePerSqm;
+        totalDuration = srv.baseDurationMinutes + Math.floor(extraSqm / 25) * 30;
+      }
+      return { srv, area, totalPrice, totalDuration };
+    }
+
+    function selectTimeSlot(timeStr) {
+      selectedSlot = timeStr;
+      renderAvailableSlots();
+    }
+
+    // Отправка заявки клиентом
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const errorBox = document.getElementById('booking-error');
+      errorBox.classList.add('hidden');
+
+      if (!selectedSlot) {
+        errorBox.textContent = 'Пожалуйста, выберите свободное время приезда бригады.';
+        errorBox.classList.remove('hidden');
+        return;
+      }
+
+      const name = document.getElementById('client-name').value.trim();
+      const phone = document.getElementById('client-phone').value.trim();
+      const address = document.getElementById('client-address').value.trim() || 'Уточнить по телефону';
+      const date = document.getElementById('booking-date').value;
+      const { srv, area, totalPrice, totalDuration } = getCurrentCalcWithoutRender();
+
+      const code = 'BC-' + Math.floor(1000 + Math.random() * 9000);
+      const newBooking = {
+        id: code,
+        serviceId: srv.id,
+        serviceTitle: srv.title,
+        area: srv.pricePerSqm > 0 ? area : null,
+        price: totalPrice,
+        durationMinutes: totalDuration,
+        date,
+        time: selectedSlot,
+        clientName: name,
+        clientPhone: phone,
+        clientAddress: address,
+        status: 'new',
+        createdAt: new Date().toISOString()
+      };
+
+      bookings.unshift(newBooking);
+      saveBookings();
+      updateAdminCounters();
+
+      // Показ подтверждения
+      const container = document.getElementById('booking-container');
+      container.innerHTML = `
+        <div class="text-center max-w-xl mx-auto py-6 space-y-6">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 flex items-center justify-center mx-auto text-3xl">
+            ✓
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#4690FF]">Заявка сохранена локально</span>
+            <h3 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">
+              Ждём вас ${date} в ${selectedSlot}
+            </h3>
+            <p class="text-sm text-[#B7C4D6] mt-2">
+              Это демонстрационная версия формы: данные сохраняются только в браузере и не отправляются представителям «КлинСервис НН».
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-[#171C25] border border-white/15 p-5 text-left space-y-2.5 text-sm">
+            <div class="flex justify-between pb-2 border-b border-white/10">
+              <span class="text-[#B7C4D6]">Код бронирования:</span>
+              <span class="font-mono font-bold text-lg text-[#4690FF]">${newBooking.id}</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-[#B7C4D6]">Услуга:</span>
+              <span class="font-semibold text-white">${newBooking.serviceTitle} ${newBooking.area ? `(${newBooking.area} м²)` : ''}</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-[#B7C4D6]">Адрес:</span>
+              <span class="font-semibold text-white">${newBooking.clientAddress}</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-[#B7C4D6]">Ориентировочная стоимость:</span>
+              <span class="font-bold text-white">${formatPrice(newBooking.price)}</span>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button type="button" onclick="location.reload()" class="px-6 py-3 rounded-lg bg-[#171C25] hover:bg-[#0F131A] border border-white/15 text-sm font-semibold text-white transition-colors">
+              Оформить ещё одну запись
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // ==================== ПОИСК ЗАПИСИ КЛИЕНТОМ ====================
+    function openClientLookupModal() {
+      document.getElementById('client-modal').classList.remove('hidden');
+      document.getElementById('lookup-result').innerHTML = '';
+    }
+
+    function closeClientLookupModal() {
+      document.getElementById('client-modal').classList.add('hidden');
+    }
+
+    function lookupClientBooking() {
+      const code = document.getElementById('lookup-code-input').value.trim().toUpperCase();
+      const box = document.getElementById('lookup-result');
+      const found = bookings.find(b => b.id === code);
+
+      if (!found) {
+        box.innerHTML = `<div class="p-3 rounded-lg bg-red-500/15 border border-red-500/30 text-xs text-red-200">Запись с кодом <strong>${code || '—'}</strong> не найдена. Проверьте код и попробуйте снова.</div>`;
+        return;
+      }
+
+      const statusLabels = {
+        new: { text: 'Ожидает подтверждения', cls: 'text-amber-400' },
+        confirmed: { text: 'Подтверждена диспетчером', cls: 'text-emerald-400' },
+        completed: { text: 'Выполнена', cls: 'text-[#B7C4D6]' },
+        cancelled: { text: 'Отменена', cls: 'text-red-400' }
+      };
+      const st = statusLabels[found.status] || statusLabels.new;
+
+      box.innerHTML = `
+        <div class="rounded-xl bg-[#27303E] border border-white/10 p-4 space-y-2.5 text-sm">
+          <div class="flex justify-between items-center">
+            <span class="font-mono font-bold text-[#4690FF]">${found.id}</span>
+            <span class="text-xs font-semibold ${st.cls}">${st.text}</span>
+          </div>
+          <div class="font-semibold text-white">${found.serviceTitle}</div>
+          <div class="text-xs text-[#B7C4D6]">Дата и время: <strong class="text-white">${found.date} в ${found.time}</strong></div>
+          <div class="text-xs text-[#B7C4D6]">Стоимость: <strong class="text-white">${formatPrice(found.price)}</strong></div>
+          ${found.status !== 'cancelled' && found.status !== 'completed' ? `
+            <div class="pt-3 border-t border-white/10 flex justify-end">
+              <button type="button" onclick="cancelBookingByClient('${found.id}')" class="px-3.5 py-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-200 text-xs font-semibold">
+                Отменить запись
+              </button>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    function cancelBookingByClient(id) {
+      const target = bookings.find(b => b.id === id);
+      if (target) {
+        target.status = 'cancelled';
+        saveBookings();
+        lookupClientBooking();
+        renderAvailableSlots();
+        updateAdminCounters();
+      }
+    }
+
+    // ==================== КАБИНЕТ ВЛАДЕЛЬЦА ====================
+    function openAdminModal() {
+      document.getElementById('admin-modal').classList.remove('hidden');
+      document.getElementById('admin-pin-input').value = '';
+      document.getElementById('admin-login-error').classList.add('hidden');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('admin-modal').classList.add('hidden');
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const pin = document.getElementById('admin-pin-input').value.trim();
+      if (pin === studioConfig.ownerPin) {
+        document.getElementById('admin-login-view').classList.add('hidden');
+        document.getElementById('admin-dashboard-view').classList.remove('hidden');
+        renderAdminBookings();
+        renderAdminServices();
+        fillAdminSettings();
+      } else {
+        document.getElementById('admin-login-error').classList.remove('hidden');
+      }
+    }
+
+    function switchAdminTab(tabName) {
+      ['bookings', 'services', 'settings'].forEach(t => {
+        document.getElementById(`admin-tab-${t}`).classList.add('hidden');
+        const btn = document.getElementById(`tab-btn-${t}`);
+        btn.classList.remove('bg-[#171C25]', 'text-[#4690FF]', 'border-t', 'border-x', 'border-white/10');
+        btn.classList.add('text-[#B7C4D6]');
+      });
+      document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+      activeBtn.classList.add('bg-[#171C25]', 'text-[#4690FF]', 'border-t', 'border-x', 'border-white/10');
+      activeBtn.classList.remove('text-[#B7C4D6]');
+    }
+
+    function updateAdminCounters() {
+      document.getElementById('admin-bookings-count').textContent = bookings.length;
+    }
+
+    function setBookingFilter(filter) {
+      bookingFilter = filter;
+      renderAdminBookings();
+    }
+
+    function renderAdminBookings() {
+      updateAdminCounters();
+      const list = document.getElementById('admin-bookings-list');
+      const filtered = bookingFilter === 'all' ? bookings : bookings.filter(b => b.status === bookingFilter);
+
+      if (filtered.length === 0) {
+        list.innerHTML = `<div class="p-6 text-center text-sm text-[#B7C4D6] bg-[#27303E]/40 rounded-xl">Заявок в выбранном статусе пока нет.</div>`;
+        return;
+      }
+
+      list.innerHTML = filtered.map(b => `
+        <div class="rounded-xl bg-[#27303E] border border-white/10 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2.5">
+              <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-[#171C25] text-[#4690FF]">${b.id}</span>
+              <span class="font-bold text-white">${b.serviceTitle}</span>
+              ${b.area ? `<span class="text-xs text-[#B7C4D6]">(${b.area} м²)</span>` : ''}
+            </div>
+            <div class="text-xs text-[#B7C4D6]">
+              Дата: <strong class="text-white">${b.date} в ${b.time}</strong> • Клиент: <strong class="text-white">${b.clientName}</strong> (${b.clientPhone})
+            </div>
+            <div class="text-xs text-[#B7C4D6]">
+              Адрес: ${b.clientAddress} • Сумма: <strong class="text-emerald-400">${formatPrice(b.price)}</strong>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <select
+              onchange="changeBookingStatus('${b.id}', this.value)"
+              class="h-9 px-3 rounded-lg bg-[#171C25] border border-white/15 text-xs font-semibold text-white"
+            >
+              <option value="new" ${b.status === 'new' ? 'selected' : ''}>Новая</option>
+              <option value="confirmed" ${b.status === 'confirmed' ? 'selected' : ''}>Подтверждена</option>
+              <option value="completed" ${b.status === 'completed' ? 'selected' : ''}>Выполнена</option>
+              <option value="cancelled" ${b.status === 'cancelled' ? 'selected' : ''}>Отменена</option>
+            </select>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function changeBookingStatus(id, newStatus) {
+      const target = bookings.find(b => b.id === id);
+      if (target) {
+        target.status = newStatus;
+        saveBookings();
+        renderAdminBookings();
+        renderAvailableSlots();
+      }
+    }
+
+    function toggleManualBookingForm() {
+      const form = document.getElementById('manual-booking-form');
+      form.classList.toggle('hidden');
+      const sel = document.getElementById('manual-service');
+      sel.innerHTML = studioConfig.services.map(s => `<option value="${s.id}">${s.title}</option>`).join('');
+      document.getElementById('manual-date').value = getFutureDateStr(1);
+    }
+
+    function handleManualBooking(e) {
+      e.preventDefault();
+      const srvId = document.getElementById('manual-service').value;
+      const srv = studioConfig.services.find(s => s.id === srvId) || studioConfig.services[0];
+      const newOrder = {
+        id: 'BC-' + Math.floor(1000 + Math.random() * 9000),
+        serviceId: srv.id,
+        serviceTitle: srv.title,
+        area: null,
+        price: srv.basePrice,
+        durationMinutes: srv.baseDurationMinutes,
+        date: document.getElementById('manual-date').value,
+        time: document.getElementById('manual-time').value,
+        clientName: document.getElementById('manual-name').value.trim(),
+        clientPhone: document.getElementById('manual-phone').value.trim(),
+        clientAddress: 'Запись по телефону',
+        status: 'confirmed',
+        createdAt: new Date().toISOString()
+      };
+      bookings.unshift(newOrder);
+      saveBookings();
+      document.getElementById('manual-booking-form').classList.add('hidden');
+      renderAdminBookings();
+      renderAvailableSlots();
+    }
+
+    function renderAdminServices() {
+      const box = document.getElementById('admin-services-list');
+      box.innerHTML = studioConfig.services.map((srv, idx) => `
+        <div class="rounded-xl bg-[#27303E] border border-white/10 p-4 grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+          <div class="sm:col-span-5">
+            <input
+              type="text"
+              value="${srv.title}"
+              onchange="updateServiceField(${idx}, 'title', this.value)"
+              class="w-full h-10 px-3 rounded bg-[#171C25] border border-white/15 text-sm font-semibold text-white"
+            />
+          </div>
+          <div class="sm:col-span-3">
+            <label class="block text-[10px] text-[#B7C4D6]">Базовая цена (₽)</label>
+            <input
+              type="number"
+              value="${srv.basePrice}"
+              onchange="updateServiceField(${idx}, 'basePrice', Number(this.value))"
+              class="w-full h-9 px-3 rounded bg-[#171C25] border border-white/15 text-sm text-white"
+            />
+          </div>
+          <div class="sm:col-span-4">
+            <label class="block text-[10px] text-[#B7C4D6]">Длительность (мин)</label>
+            <input
+              type="number"
+              step="30"
+              value="${srv.baseDurationMinutes}"
+              onchange="updateServiceField(${idx}, 'baseDurationMinutes', Number(this.value))"
+              class="w-full h-9 px-3 rounded bg-[#171C25] border border-white/15 text-sm text-white"
+            />
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateServiceField(index, field, val) {
+      studioConfig.services[index][field] = val;
+      saveConfig();
+      renderServices();
+      populateBookingServices();
+      renderBrandUI();
+    }
+
+    function fillAdminSettings() {
+      document.getElementById('set-name').value = studioConfig.name;
+      document.getElementById('set-watermark').value = studioConfig.watermark;
+      document.getElementById('set-city').value = studioConfig.city;
+      document.getElementById('set-phone').value = studioConfig.phone;
+      document.getElementById('set-address').value = studioConfig.address;
+      document.getElementById('set-crews').value = studioConfig.crewsCount;
+      document.getElementById('set-pin').value = studioConfig.ownerPin;
+    }
+
+    function saveStudioSettings(e) {
+      e.preventDefault();
+      studioConfig.name = document.getElementById('set-name').value.trim();
+      studioConfig.watermark = document.getElementById('set-watermark').value.trim().toUpperCase();
+      studioConfig.city = document.getElementById('set-city').value.trim();
+      studioConfig.phone = document.getElementById('set-phone').value.trim();
+      studioConfig.phoneRaw = studioConfig.phone.replace(/[^+\d]/g, '');
+      studioConfig.address = document.getElementById('set-address').value.trim();
+      studioConfig.crewsCount = Number(document.getElementById('set-crews').value) || 3;
+      studioConfig.ownerPin = document.getElementById('set-pin').value.trim() || '2026';
+
+      saveConfig();
+      renderBrandUI();
+      renderAvailableSlots();
+      alert('Настройки компании сохранены и обновлены на сайте.');
+    }
+
+    function resetDemoData() {
+      localStorage.removeItem(STORAGE_KEY_CONFIG);
+      localStorage.removeItem(STORAGE_KEY_BOOKINGS);
+      location.reload();
+    }
+
+    // Инициализация при загрузке страницы
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateInput = document.getElementById('booking-date');
+      const tomorrow = getFutureDateStr(1);
+      dateInput.min = getFutureDateStr(0);
+      dateInput.value = tomorrow;
+
+      renderBrandUI();
+      renderServices();
+      renderGallery();
+      populateBookingServices();
+      updateAdminCounters();
+    });
+  </script>
 </body>
 </html>
