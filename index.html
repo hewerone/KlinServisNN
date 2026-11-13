@@ -265,12 +265,13 @@
         <a href="#services" class="hover:text-[#17191D] transition-colors">Услуги</a>
         <a href="#process" class="hover:text-[#17191D] transition-colors">Этапы работы</a>
         <a href="#gallery" class="hover:text-[#17191D] transition-colors">Направления работ</a>
+        <a href="#booking" class="hover:text-[#17191D] transition-colors">Контакт</a>
         
         <a href="#contacts" class="hover:text-[#17191D] transition-colors">Контакты</a>
       </nav>
 
       <!-- Инструменты клиента и владельца -->
-      <div class="flex items-center gap-2 sm:gap-3" style="display:none">
+      <div class="flex items-center gap-2 sm:gap-3">
         <button
           type="button"
           onclick="openClientLookupModal()"
@@ -521,157 +522,25 @@
   </section>
 
   <!-- ==================== ОНЛАЙН-ЗАПИСЬ И КАЛЬКУЛЯТОР ==================== -->
-  <section id="booking" style="display:none" class="bg-[#131720] text-[#F5F7FC] py-16 sm:py-24 border-b border-white/10">
+  <section id="booking" class="bg-[#131720] text-[#F5F7FC] py-16 sm:py-24 border-b border-white/10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-10">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#4690FF]">Заявка на услугу</span>
-        <h2 class="font-display font-bold text-3xl sm:text-5xl mt-2">
-          Оставить заявку
-        </h2>
-        <p class="text-sm sm:text-base text-[#B7C4D6] mt-3">
-          Оставьте контактные данные и удобную дату. Менеджер свяжется с вами для уточнения деталей и подтверждения заказа.
-        </p>
+        <span class="text-xs font-bold uppercase tracking-widest text-[#4690FF]">Расчёт стоимости</span>
+        <h2 class="font-display font-bold text-3xl sm:text-5xl mt-2">Обсудить задачу</h2>
+        <p class="text-sm sm:text-base text-[#B7C4D6] mt-3">Расскажите о типе объекта, площади и характере загрязнений. Стоимость и возможность выполнения работ уточняются индивидуально.</p>
       </div>
-
-      <!-- Контейнер формы или экрана подтверждения -->
-      <div id="booking-container" class="rounded-2xl bg-[#27303E] border border-white/12 p-6 sm:p-10 shadow-2xl">
-        <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-8">
-          
-          <!-- Шаг 1: Выбор услуги и площади -->
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div class="md:col-span-7">
-              <label for="booking-service" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
-                1. Выберите услугу
-              </label>
-              <select
-                id="booking-service"
-                onchange="recalculateBooking()"
-                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white font-medium focus:outline-none focus:border-[#4690FF]"
-              ></select>
-            </div>
-
-            <div class="md:col-span-5" id="area-input-wrapper">
-              <div class="flex items-center justify-between mb-2">
-                <label for="booking-area" class="text-xs font-bold uppercase tracking-wider text-[#B7C4D6]">
-                  2. Площадь помещения
-                </label>
-                <span id="area-value-badge" class="text-sm font-bold text-[#4690FF]">55 м²</span>
-              </div>
-              <input
-                id="booking-area"
-                type="range"
-                min="25"
-                max="220"
-                step="5"
-                value="55"
-                oninput="recalculateBooking()"
-                class="w-full accent-[#4690FF] cursor-pointer mt-2"
-              />
-              <div class="flex justify-between text-[11px] text-[#B7C4D6]/70 mt-1">
-                <span>25 м² (студия)</span>
-                <span>100 м²</span>
-                <span>220 м² (дом)</span>
-              </div>
-            </div>
+      <div class="rounded-2xl bg-[#27303E] border border-white/12 p-6 sm:p-10 shadow-2xl">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#B7C4D6]">Связаться с КлинСервис НН</div>
+            <a href="tel:+79159447589" class="block font-display font-bold text-3xl sm:text-4xl text-white mt-2 hover:text-[#4690FF] transition-colors">+7 (915) 944-75-89</a>
+            <p class="text-sm text-[#B7C4D6] mt-2">Нижний Новгород, ул. Тираспольская, 23</p>
           </div>
-
-          <!-- Итоговая плашка расчёта -->
-          <div class="rounded-xl bg-[#171C25] border border-white/10 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <div class="text-xs text-[#B7C4D6]">Расчётная стоимость работ</div>
-              <div id="calculated-price" class="font-display font-bold text-2xl sm:text-3xl text-white mt-0.5">
-                5 65По запросу
-              </div>
-            </div>
-            <div>
-              <div class="text-xs text-[#B7C4D6]">Ориентировочная длительность</div>
-              <div id="calculated-duration" class="font-display font-semibold text-xl text-[#4690FF] mt-0.5">
-                ~ 3 ч 00 мин
-              </div>
-            </div>
-            <div class="text-xs text-[#B7C4D6] max-w-xs">
-              Инвентарь, стремянка и профессиональная химия уже включены в стоимость.
-            </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="tel:+79159447589" class="btn-metal"><span>Позвонить</span></a>
+            <a href="https://wa.me/79159447589" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-16 px-7 rounded-lg bg-[#171C25] border border-white/20 text-white font-semibold hover:border-[#4690FF] transition-colors">WhatsApp</a>
           </div>
-
-          <!-- Шаг 2: Дата и выбор свободного слота -->
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2 border-t border-white/10">
-            <div class="md:col-span-4">
-              <label for="booking-date" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
-                3. Дата выезда
-              </label>
-              <input
-                id="booking-date"
-                type="date"
-                onchange="renderAvailableSlots()"
-                required
-                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white font-medium focus:outline-none focus:border-[#4690FF]"
-              />
-            </div>
-
-            <div class="md:col-span-8">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#B7C4D6]">
-                  4. Желаемое время
-                </span>
-                <span id="slots-status-hint" class="text-xs text-[#4690FF]"></span>
-              </div>
-              <div id="slots-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5"></div>
-            </div>
-          </div>
-
-          <!-- Шаг 3: Контакты клиента -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 border-t border-white/10">
-            <div>
-              <label for="client-name" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
-                Ваше имя *
-              </label>
-              <input
-                id="client-name"
-                type="text"
-                required
-                placeholder="Например, Алексей"
-                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white placeholder-[#B7C4D6]/40 focus:outline-none focus:border-[#4690FF]"
-              />
-            </div>
-            <div>
-              <label for="client-phone" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
-                Телефон для связи *
-              </label>
-              <input
-                id="client-phone"
-                type="tel"
-                required
-                placeholder="+7 (999) 000-00-00"
-                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white placeholder-[#B7C4D6]/40 focus:outline-none focus:border-[#4690FF]"
-              />
-            </div>
-            <div>
-              <label for="client-address" class="block text-xs font-bold uppercase tracking-wider text-[#B7C4D6] mb-2">
-                Адрес объекта (район / улица)
-              </label>
-              <input
-                id="client-address"
-                type="text"
-                placeholder="пр-т Жукова, д. 100"
-                class="w-full h-12 px-4 rounded-lg bg-[#171C25] border border-white/15 text-white placeholder-[#B7C4D6]/40 focus:outline-none focus:border-[#4690FF]"
-              />
-            </div>
-          </div>
-
-          <!-- Сообщение об ошибке валидации -->
-          <div id="booking-error" class="hidden rounded-lg bg-red-500/15 border border-red-500/40 px-4 py-3 text-sm text-red-200"></div>
-
-          <!-- Кнопка отправки -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
-            <button type="submit" class="btn-metal w-full sm:w-auto">
-              <span>Отправить заявку</span>
-            </button>
-            <span class="text-xs text-[#B7C4D6]/80">
-              Для уточнения условий и расчёта стоимости свяжитесь с компанией по телефону.
-            </span>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
